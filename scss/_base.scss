@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font;
+  color: $color-body;
+  background: #202124;
+}
+
+html,
+body {
+  &._overflow {
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  color: $color-white;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  outline: none;
+  width: 100%;
+  border: 1px solid transparent;
+  transition: 0.1s all ease-in-out;
+
+  // padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.form {
+  color: $color-white;
+  // margin: 0 auto;
+  border-radius: 5px;
+  padding: 25px;
+  // max-width: fit-content;
+  max-width: 500px;
+  width: 100%;
+  background: #3c4043;
+  transition: 0.2s all ease-in-out;
+  /* &:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+  } */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+label {
+  min-width: 100px;
+}
+
+.form__group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+button {
+  width: 100%;
+  cursor: pointer;
+  font-family: $font;
+  background: $color-white;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.1s all ease-in-out;
+  &:hover {
+    background: #202124;
+    color: $color-white;
+  }
+}
+.password-container {
+  width: 100%;
+  // position: relative;
+
+  // display: inline-block;
+}
+
+.password-input {
+  // padding-right: 30px; 
+}
+
+.password-input[type="password"] + .password-icon {
+  background: url(/login/img/eye.png) no-repeat center;
+}
+
+.password-input[type="text"] + .password-icon {
+  background: url(/login/img/eyeClose.png) no-repeat center;
+}
+
+.password-icon {
+  //background: url(/login/img/eye.png) no-repeat center;
+  position: absolute;
+  right: 0;
+  width: 10%;
+  height: 100%;
+  transition: 0.1s all ease-in-out;
+  cursor: pointer;
+}
+
+.form__error {
+  position: absolute;
+  left: 120px;
+  bottom: -100%;
+  color: red;
+  font-size: 12px;
+  font-style: italic;
+}
